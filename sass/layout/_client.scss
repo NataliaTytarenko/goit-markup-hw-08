@@ -1,0 +1,33 @@
+.client__title {
+    margin-bottom: 50px;
+    font-style: normal;
+    @include font(36px, 700);
+    line-height: 1.17;
+    text-align: center;
+    color: var(--title-text-color);
+  }
+  .client-list {
+    display: flex;
+    gap: 30px;
+  }
+  .client-list__item {
+    width: 170px;
+    height: 92px;
+  }
+  .client-list__link {
+    @extend %align;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    color: var(--icon-color);
+    fill: currentColor;
+    transition: color var(--transition-dur-and-func),
+      border-color var(--transition-dur-and-func);
+      &:hover,
+      &:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+  }
+  

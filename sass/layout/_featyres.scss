@@ -1,0 +1,30 @@
+.featyres__title {
+  color: var(--title-text-color);
+}
+.featyres-list {
+    display: flex;
+    column-gap: 30px;
+  }
+  .featyres-list__item {
+    width: 270px;
+  }
+  .featyres-list__box-icon {
+    @extend %align;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--background-color-button);
+    border-radius: 4px;
+  }
+  
+  .featyres-list__title {
+    margin-bottom: 10px;
+    @include font(14px, 700);
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+  }
+  .featyres-list__text {
+    font-size: 14px;
+    line-height: 1.71;
+  }

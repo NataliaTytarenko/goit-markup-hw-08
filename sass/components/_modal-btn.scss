@@ -1,0 +1,22 @@
+.modal-open-btn {
+    border-radius: 4px;
+    padding: 10px 32px;
+    margin: 0 auto;
+    min-width: 216px;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    @include font(16px, 700);
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--hero-color);
+    background-color: var(--accent-color);
+    transition: background-color var(--transition-dur-and-func);
+    &:hover,
+    &:focus {
+    background-color: var(--background-color-active-button);
+  }
+  }
+  
