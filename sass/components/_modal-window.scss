@@ -1,10 +1,14 @@
-.modal {
+
+@media screen and(min-width: 200px) {
+  .modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 528px;
-    height: 581px;
+    width: 100%;
+    max-width: 450px;
+    height: 100vh;
+    max-height: 609px;
     padding: 40px;
     background-color: var(--hero-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -15,7 +19,9 @@
     position: absolute;
     top: 8px;
     right: 8px;
-    @extend %align;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
     height: 30px;
     background-color: var(--hero-color);
@@ -28,5 +34,16 @@
     fill: var(--accent-color);
   }
   }
-  
-  
+}
+  @media screen and (min-width:768px) {
+    .modal {
+    max-width: 450px;
+  height: 609px;
+    }
+  }
+  @media screen and (min-width:1200px) {
+    .modal {
+    max-width: 528px;
+  height: 581px;
+    }
+  }

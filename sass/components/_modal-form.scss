@@ -4,9 +4,8 @@
 }
 .modal-form__title {
     margin-bottom: 12px;
-  
     @include font(20px, 700);
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
@@ -17,7 +16,6 @@
   .modal-form__desc {
     display: block;
     margin-bottom: 4px;
-    font-style: normal;
     @include font(12px, 400);
     line-height: 1.17;
     letter-spacing: 0.01em;
@@ -28,6 +26,7 @@
   }
   .modal-form__input {
     width: 100%;
+    max-width: 370px;
     height: 40px;
     padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -63,10 +62,9 @@
     border-radius: 4px;
     transition: border-color var(--transition-dur-and-func);
     &::placeholder {
-      @include font(12px, 400);
-      line-height: 1.17;
+      @include font(14px, 400);
+      line-height: 1.14;
       letter-spacing: 0.01em;
-    
       color: rgba(117, 117, 117, 0.5);
     }
     &:focus {
@@ -76,22 +74,22 @@
   }
   
   .modal-form__check-field {
-    @extend %align;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
     text-align: center;
-  
-    @include font(14px, 400);
-    line-height: 1.71;
+    @include font(12px, 400);
+    line-height: 1.17;
   }
   .modal-form__check {
     position: absolute;
     appearance: none;
     transition: box-shadow var(--transition-dur-and-func);
-  
   }
   .modal-form-own-checkbox {
     cursor: pointer;
-    margin-right: 7px;
+    margin-right: 8px;
     border: 0.2px solid var(--title-text-color);
     border-radius: 2px;
     .modal-form__check:checked + & {
@@ -135,5 +133,20 @@
     &:focus {
     background-color: var(--background-color-active-button);
   }
+  }
+  @media screen and(min-width:768px) {
+    .modal-form__message {
+    @include font(12px, 400);
+      line-height: 1.17;
+    }
+  }
+  @media screen and(min-width: 1200px) {
+    .modal-form__input {
+      max-width: 448px;
+    }
+    .modal-form__check-field {
+      @include font(14px, 400);
+      line-height: 1.71;
+    }
   }
   
